@@ -1,0 +1,16 @@
+### Health
+GET http://localhost:3000/health
+
+### Readiness
+GET http://localhost:3000/readiness
+
+### Create example
+POST http://localhost:3000/examples
+Content-Type: application/json
+
+{
+  "name": "hello"
+}
+
+### List examples
+GET http://localhost:3000/examples?page=1&limit=10
