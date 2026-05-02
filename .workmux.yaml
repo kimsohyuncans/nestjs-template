@@ -1,0 +1,17 @@
+base_branch: main
+
+files:
+  copy:
+    - .env
+
+post_create:
+  - pnpm install && npx prisma generate
+
+panes:
+  - command: <agent>
+    focus: true
+  - split: horizontal
+
+dashboard:
+  merge: '!workmux merge'
+
